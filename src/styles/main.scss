@@ -1,0 +1,29 @@
+@import "modern-normalize/modern-normalize.css";
+
+@import "./variables";
+@import "./mixins";
+
+@import "./blocks/visually-hidden";
+@import "./blocks/container";
+@import "./blocks/button";
+@import "./blocks/header";
+@import "./blocks/hero";
+@import "./blocks/card";
+@import "./blocks/features";
+@import "./blocks/clients";
+@import "./blocks/cta";
+@import "./blocks/footer";
+@import "./blocks/modal";
+
+body.page {
+  background: var(--c-white);
+  font-family: "Gilroy-Regular";
+}
+.main{
+  position: relative;
+}
+.logo {
+  display: inline-flex;
+  width: 48px; height: 48px;
+  align-items: center; justify-content: center;
+}

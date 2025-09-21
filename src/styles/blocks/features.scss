@@ -1,0 +1,52 @@
+.features {
+  padding: 168px 0 20px;
+
+  &__inner{
+    display: grid;
+    grid-template-areas: "f f f f u u u u u"
+                         "f f f f u u u u u"
+                         "f f f f u u u u u"
+                         "b b b b u u u u u"
+                         "b b b b i i i i i"
+                         "b b b b i i i i i"
+                         "t t t t i i i i i"
+                         "t t t t i i i i i"
+                         "t t t t y y y y y";
+  }
+
+  &__title {
+    max-width: 410px;
+    font-size: clamp(22px, 2.6vw, 33px);
+    color: var(--c-blue2);
+    margin-bottom: 24px;
+    margin-left: 131px;
+    font-weight: 600;
+    line-height: 46px;
+    margin: 20px 0 24px 132px;
+    letter-spacing: 3.3px;
+  }
+  
+  @media (max-width: 1100px) {
+    &__title{
+      margin-left: 0;
+    }
+  }
+  @media (max-width: 1050px) {
+    &__inner{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+  }
+  @media (max-width: 1000px) {
+    &{
+      padding-top: 110px;
+    }
+  }
+  @media (max-width: 560px) {
+    &__title{
+      letter-spacing: 2.3px;
+    }
+  }
+}

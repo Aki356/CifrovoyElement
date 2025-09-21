@@ -1,0 +1,103 @@
+.page.scroll-lock { overflow: hidden; }
+
+.modal {
+  position: fixed; inset: 0;
+  display: none;
+  &.is-open { display: block; }
+
+  &__overlay {
+    position: absolute; inset: 0; background: rgba(30, 41, 59, .5);
+    animation: fade .2s ease;
+  }
+
+  &__window {
+    position: relative;
+    width: min(540px, 100% - 32px);
+    margin: 20px auto;
+    background: var(--c-white);
+    border-radius: 10px;
+    box-shadow: 5px 10px 50px 0px rgba(16, 112, 177, 0.2);
+    padding: 56px;
+    animation: pop .2s ease;
+  }
+
+  &__close {
+    position: absolute; right: 14px; top: 14px;
+    width: 40px; height: 40px; border-radius: 10px;
+    border: 1px solid #e5e7eb; background: #fff; cursor: pointer;
+  }
+
+  &__title { 
+    color: var(--c-blue1);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.8px;
+    margin: 0;
+  }
+  @media (max-width: 430px) {
+    &__window{
+      padding: 40px;
+    }
+  }
+}
+
+@keyframes fade { from { opacity: 0 } to { opacity: 1 } }
+@keyframes pop { from { transform: translateY(6px); opacity: 0 } to { transform: none; opacity: 1 } }
+
+.form {
+  display: grid; gap: 33px; margin-top: 47px;
+
+  &__row { display: grid; gap: 9px; }
+  &__label { 
+    color: var(--c-blue1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+  }
+
+  &__input {
+    width: 100%; min-height: 48px; 
+    padding: 20px 41px; border-radius: 10px;
+    border: 1px solid rgba(53, 110, 173, 1); outline: none; background: transparent;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.9px;
+    opacity: 0.4;
+    color: var(--c-blue1);
+  }
+  &__input:focus { border-color: var(--c-primary); box-shadow: 0 0 0 3px rgba(76,134,198,.15); }
+
+  &__textarea { min-height: 120px; resize: vertical; }
+
+  &__error { color: #b91c1c; min-height: 18px; font-size: 13px; }
+  &__submit { margin-top: 8px; padding: 23px 49px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 1px;
+    box-shadow: 5px 10px 50px 0px rgba(16, 112, 177, 0.4);
+  }
+  @media (max-width: 430px) {
+    & {
+      gap: 25px;
+      margin-top: 25px;
+    }
+    &__input{
+      padding: 10px 20px;
+    }
+    &__submit{
+      padding: 15px 49px;
+    }
+  }
+}
+
+/* Toast */
+.toast {
+  position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%);
+  background: #16a34a; color: #fff; padding: 12px 16px; border-radius: 10px;
+  box-shadow: var(--shadow-card); display: none;
+}
+.toast.is-shown { display: block; }

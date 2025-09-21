@@ -1,0 +1,16 @@
+.header {
+  background: transparent;
+
+  &__inner { 
+    display: flex; align-items: center; justify-content: space-between; 
+    margin-top: 21px;
+  }
+
+  &__burger {
+    border: none; background: var(--c-white);
+  }
+  &__burger-line {
+    width: 24px; height: 16px;
+    display: block; margin: 0 auto;
+  }
+}

@@ -1,0 +1,98 @@
+.footer {
+  background: var(--c-blue4);
+  color: #e0ecff;
+  display: flex;
+  &::before{
+    content: "";
+    background: var(--c-blue2);
+    flex: 0.6;
+  }
+  
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &>h3{
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 46px;
+      letter-spacing: 1px;
+      padding-bottom: 4px;
+      margin: 0;
+    }
+  }
+  &__inner {
+    background: var(--c-blue2);
+    display: grid;
+    gap: 33px;
+    grid-template-columns: 1fr 0.6fr 0.9fr;
+    width: 1065px;
+    padding: 96px 109px 50px 0;
+  }
+
+  &__desc { color: var(--c-white); display: flex; gap: 22px; flex-direction: column; margin-left: 1px; margin-top: 30px; }
+  &__contacts{
+    display: flex;
+  }
+  &__contact {  
+    margin-right: 18px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 2px;
+  }
+  &__text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+  }
+  &__nav{ margin-left: 12px; }
+  &__title{
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+  }
+  &__list { 
+    display: grid;
+    gap: 16px;
+    list-style-type: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+    margin: 32px 0;
+    padding: 0;
+  }
+  &__copy { 
+    padding: 13px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+    opacity: 0.4;
+  }
+
+  a { color: #fff; text-decoration: none; opacity: .9; }
+  a:hover { opacity: 1; text-decoration: underline; }
+
+  @media (max-width: 1400px) { &__inner { padding-left: 33px; } &__nav{ margin-left: 24px; } }
+  @media (max-width: 1200px) {
+    &__inner{
+      width: 930px;
+    }
+  }
+  @media (max-width: 700px) {
+    &__inner{
+      display: flex;
+      align-items: flex-start;
+      gap: 80px;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+    &__nav{ margin-left: 0; }
+  }
+}
