@@ -1,8 +1,6 @@
-// src/js/validators.js
-
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
 
-// --- Индивидуальные валидаторы (как было) ---
+// --- Индивидуальные валидаторы ---
 export function validateName(value) {
   const v = String(value || '').trim();
   if (v.length < 2) return 'Please enter at least 2 characters';

@@ -2,6 +2,12 @@ import { defineConfig } from 'vite';
 import path from 'node:path';
 
 export default defineConfig({
+  base: '/CifrovoyElement/',
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    sourcemap: false
+  },
   root: '.',
   server: {
     port: 5173,

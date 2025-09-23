@@ -1,6 +1,6 @@
 import '../styles/main.scss';
 
-// Автоимпорт всех SCSS-блоков (тогда в main.scss не должно быть @import блоков)
+// Автоимпорт всех SCSS-блоков
 import.meta.glob('../styles/blocks/**/*.scss', { eager: true });
 
 import { qsa } from './dom.js';
@@ -13,7 +13,7 @@ qsa('[data-modal="contact"]').forEach((btn) => {
   btn.addEventListener('click', () => contactModal.open());
 });
 
-// --- Toast (использует .toast из modal.scss)
+// --- Toast
 const toastEl = (() => {
   let el = document.getElementById('toast');
   if (!el) {
