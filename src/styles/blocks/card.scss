@@ -10,8 +10,8 @@
   &__title {
     font-weight: 600;
     font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 1.2px;
+    line-height: 32px;
+    letter-spacing: 1px;
     color: var(--c-blue1); 
     margin: 0;
   }
@@ -22,8 +22,8 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    letter-spacing: 0.8px;
-    margin-right: 20px;
+    letter-spacing: 1.1px;
+    margin-right: 5px;
   }
 
   &__link {
@@ -52,7 +52,7 @@
 .icon1-position{
   position: relative;
   top: -70px;
-  right: 19px;
+  left: 19px;
   height: 187px;
 }
 .icon1, .icon1>use{
@@ -60,7 +60,7 @@
 }
 .icon2-position{
   position: relative;
-  right: 35px;
+  left: 18px;
   height: 182px;
 }
 .icon2, .icon2>use{
@@ -69,11 +69,12 @@
 
 .icon3-position{
   position: relative;
-  right: 35px;
+  left: 38px;
+  top: 2px;
   height: 186px;
 }
 .icon3, .icon3>use{
-  height: 140px;
+  height: 131px;
 }
 
 @media (max-width: 1200px) { 

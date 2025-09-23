@@ -1,9 +1,13 @@
 .page.scroll-lock { overflow: hidden; }
-
 .modal {
   position: fixed; inset: 0;
   display: none;
-  &.is-open { display: block; }
+  &.is-open { 
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    overflow: auto;  
+  }
 
   &__overlay {
     position: absolute; inset: 0; background: rgba(30, 41, 59, .5);
@@ -13,11 +17,15 @@
   &__window {
     position: relative;
     width: min(540px, 100% - 32px);
+    max-height: calc(100svh - 40px);
     margin: 20px auto;
     background: var(--c-white);
     border-radius: 10px;
     box-shadow: 5px 10px 50px 0px rgba(16, 112, 177, 0.2);
     padding: 56px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
     animation: pop .2s ease;
   }
 
@@ -97,7 +105,7 @@
 /* Toast */
 .toast {
   position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%);
-  background: #16a34a; color: #fff; padding: 12px 16px; border-radius: 10px;
+  background: #6FCF97; color: #fff; padding: 12px 16px; border-radius: 10px;
   box-shadow: var(--shadow-card); display: none;
 }
 .toast.is-shown { display: block; }

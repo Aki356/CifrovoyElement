@@ -7,11 +7,11 @@
     margin: 25px 0 0 130px;
   }
   &__title {
-    font-size: clamp(32px, 4.2vw, 56px);
+    font-size: clamp(32px, 4.7vw, 64px);
     font-family: Galien;
     font-weight: 700;
-    line-height: 74px;
-    letter-spacing: 2px;
+    line-height: 73px;
+    letter-spacing: 2.4px;
     color: var(--c-blue1);
     margin: 0 0 35px;
   }
@@ -22,8 +22,8 @@
     margin: 0 0 77px;
     font-weight: 400;
     font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.8px;
+    line-height: 27px;
+    letter-spacing: 1px;
   }
 
   &__art { 

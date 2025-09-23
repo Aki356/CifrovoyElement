@@ -4,9 +4,9 @@
   justify-content: center;
   gap: 8px;
   min-height: 48px;
-  padding: 19px 49px;
+  padding: 18px 49px;
   border: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.9px;
   border-radius: 10px;
   font-weight: 400;
   text-decoration: none;
@@ -33,3 +33,11 @@
     &:active { transform: translateY(0); box-shadow: none; }
   }
 }
+button[disabled], .is-loading { cursor: not-allowed; opacity: .7; }
+.is-loading { position: relative; }
+.is-loading::after {
+  content: ""; position: absolute; right: 12px; top: 50%; width: 16px; height: 16px;
+  margin-top: -8px; border: 2px solid currentColor; border-right-color: transparent;
+  border-radius: 50%; animation: spin .8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
