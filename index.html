@@ -9,8 +9,8 @@
     <title>New Automation Tool for Your Home</title>
     <meta name="description" content="Automation landing page" />
     <link rel="icon" href="/CifrovoyElement/assets/icon-7y6A-lTE.svg" type="image/svg+xml" sizes="any">
-    <script type="module" crossorigin src="/CifrovoyElement/assets/index-CapGyf8z.js"></script>
-    <link rel="stylesheet" crossorigin href="/CifrovoyElement/assets/index-BZA_JuNx.css">
+    <script type="module" crossorigin src="/CifrovoyElement/assets/index-DfpYD65t.js"></script>
+    <link rel="stylesheet" crossorigin href="/CifrovoyElement/assets/index-B9LTKcXU.css">
   </head>
   <body class="page">
     <!-- SVG-спрайт -->
@@ -225,11 +225,11 @@
             </div>
             <div class="footer__contacts">
               <div class="footer__contact">T.</div>
-              <div class="footer__text">+62-812-7313-4321</div>
+              <a class="footer__text" href="tel:+6281273134321">+62-812-7313-4321</a>
             </div>
             <div class="footer__contacts">
               <div class="footer__contact">E.</div>
-              <div class="footer__text">hello.afrian@gmail.com</div>
+              <a class="footer__text" href="mailto:hello.afrian@gmail.com">hello.afrian@gmail.com</a>
             </div>
           </div>
         </div>
@@ -281,20 +281,20 @@
         <form class="form" id="contact-form" novalidate>
           <div class="form__row">
             <label class="form__label" for="fullName">Full Name</label>
-            <input class="form__input" id="fullName" name="fullName" placeholder="Your Name" />
-            <p class="form__error" data-error-for="fullName" style="display: none;"></p>
+            <input class="form__input" name="fullName" type="text" data-validate="required|min:2">
+            <small class="form__error" data-error-for="fullName" hidden></small>
           </div>
 
           <div class="form__row">
             <label class="form__label" for="email">Email</label>
-            <input class="form__input" id="email" name="email" placeholder="Your Email" />
-            <p class="form__error" data-error-for="email" style="display: none;"></p>
+            <input class="form__input" name="email" type="email" data-validate="required|email">
+            <small class="form__error" data-error-for="email" hidden></small>
           </div>
 
           <div class="form__row">
             <label class="form__label" for="message">Message</label>
-            <textarea class="form__input form__textarea" id="message" name="message" placeholder="Your Message"></textarea>
-            <p class="form__error" data-error-for="message" style="display: none;"></p>
+            <textarea class="form__input form__textarea" name="message" data-validate="required|min:10"></textarea>
+            <small class="form__error" data-error-for="message" hidden></small>
           </div>
 
           <button class="btn btn--primary form__submit" type="submit">SUBMIT</button>
