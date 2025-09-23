@@ -1,3 +1,28 @@
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("/fonts/Gilroy-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("/fonts/Gilroy-Regular.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Galien";
+  src: url("/fonts/Galien-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Базовый стек на случай отсутствия файлов */
+body.page { font-family: "Gilroy-Regular", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+
 @import "modern-normalize/modern-normalize.css";
 
 @import "./variables";
@@ -17,7 +42,6 @@
 
 body.page {
   background: var(--c-white);
-  font-family: "Gilroy-Regular";
 }
 .main{
   position: relative;
